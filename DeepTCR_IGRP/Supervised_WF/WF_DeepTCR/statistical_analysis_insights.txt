@@ -1,0 +1,15 @@
+
+Variance and Consistency Analysis
+For both tp8 and tp14, variance and standard deviation across thresholds are low for all metrics (F1, F0.75, and F0.5). This implies stability in model performance across thresholds, suggesting models selected based on any of these metrics might be reliable across threshold changes.
+
+Paired T-Test Results
+The paired t-tests show consistent, significant differences across all comparisons (F1 vs F0.75, F1 vs F0.5, and F0.75 vs F0.5) and thresholds for both tp8 and tp14. This supports the need for metric-specific model selection, as models optimized for one score may not necessarily perform well for another.
+
+Friedman Test for Tissue Consistency
+The Friedman tests indicate significant variability across thresholds for each metric in both tp8 and tp14. This finding suggests that the model’s consistency with tissue types varies depending on the chosen threshold, indicating a need for threshold-specific evaluations to ensure tissue prediction stability.
+
+Correlation Analysis
+Most correlations between model scores and tissue predictions are weak (often non-significant), though a few moderate correlations suggest some predictive relationships. However, the lack of strong correlations in most cases implies that these metrics may not be highly predictive of tissue-specific outcomes. For a more robust prediction model, it may be necessary to explore additional features or scoring adjustments that could enhance tissue-type prediction accuracy.
+
+PCA and Clustering Analysis
+Silhouette scores for clustering of heatmap data for both tp8 and tp14 are moderate, indicating some clustering tendency but not strongly distinct clusters. This moderate clustering could reflect partial segmentation of model behavior but not strongly separated groupings, suggesting model behaviors have overlaps across metrics. Consider reviewing additional dimensionality reduction techniques or alternative clustering metrics to clarify group distinctions.
